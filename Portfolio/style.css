@@ -1,0 +1,164 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+}
+
+/* Navbar Customization */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    transition: background-color 0.3s ease;
+}
+.navbar.scrolled {
+    background-color: rgba(33, 37, 41, 0.9) !important; /* Slightly more opaque when scrolled */
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--bs-primary); /* Use Bootstrap's primary color variable */
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/hero-bg.jpg') center center no-repeat;
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    color: #fff;
+    display: flex; /* Using flexbox for centering */
+    align-items: center;
+    text-align: center;
+}
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+#hero p {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    #hero p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary default, customize as needed */
+    border-color: #007bff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+.btn-outline-dark {
+    border-color: #343a40;
+    color: #343a40;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-outline-dark:hover {
+    background-color: #343a40;
+    color: #fff;
+}
+
+
+/* Section Padding */
+section {
+    padding: 80px 0;
+}
+section#about, section#contact {
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+}
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--bs-primary);
+    border-radius: 2px;
+}
+
+/* About Section */
+#about img {
+    max-width: 250px; /* Control profile picture size */
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Portfolio Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.card-img-top {
+    height: 200px; /* Fixed height for consistent card appearance */
+    object-fit: cover;
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 10px;
+}
+.modal-body img {
+    border-radius: 8px;
+}
+.badge {
+    padding: 0.5em 0.8em;
+    font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+    background-color: #212529; /* Darker than navbar for distinction */
+    color: #f8f9fa;
+}
+.social-links a {
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: var(--bs-primary);
+}
+
+/* AOS overrides/tweaks (optional) */
+[data-aos="fade-up"],
+[data-aos="fade-right"],
+[data-aos="fade-left"],
+[data-aos="zoom-in"] {
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-out;
+}
+
