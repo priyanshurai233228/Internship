@@ -51,6 +51,10 @@ body {
   background: #222;
   color: #fff;
 }
+.btn:active {
+    background-color:blue ;
+    transform: scale(0.98);
+}
 #next-btn {
   background: #115ed8;
   color: white;
